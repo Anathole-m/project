@@ -1,12 +1,12 @@
 import { useState } from "react";
 
  function Login() {
-    const Email="admin@gmail.com";
-    const Pass="admin";
+  const Email="admin@gmail.com";
+  const Pass="admin";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(false);
 
   const handleLogin = () => {
     if (email === Email && password === Pass) {
@@ -35,7 +35,7 @@ import { useState } from "react";
         <div className="mb-4">
           <label className="block text-gray-700 mb-1">Password:</label>
           <input
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? "text" : "password"} 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password"
